@@ -20,6 +20,8 @@
   
 
   
+    <meta name="description" content="在上一篇介绍JDBC基础使用的博文中，简单了解到JDBC的使用。但是，也看出了一定的弊端：重复代码量较大。在我们每次新建一个JDBC的类操作数据库时，都要不停的进行驱动的注册，数据库的连接，参数的输入等大量重复性的操作。所以，有没有什么方法简化这一类的操作呢？其实，将这些重复的代码进行抽取，作为一个工具类，每次使...">
+  
 
   <!-- feed -->
   
@@ -496,6 +498,8 @@
 </ul>
 </li>
 </ol>
+<a id="more"></a>
+
 <h4 id="一、获取连接"><a href="#一、获取连接" class="headerlink" title="一、获取连接"></a>一、获取连接</h4><p>因为我们需要将JDBC抽取为工具类，便于使用。故采取静态方法。</p>
 <h5 id="1-注册驱动"><a href="#1-注册驱动" class="headerlink" title="1.注册驱动"></a>1.注册驱动</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">COPY&#x2F;&#x2F; 用于注册驱动，加载</span><br><span class="line">   public static Connection getConnection() throws Exception &#123;</span><br><span class="line">       return DriverManager.getConnection(url, user, password);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 
@@ -599,7 +603,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-08T17:51:11+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-08T18:20:06+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2020年8月8日</p>
@@ -626,7 +630,15 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/08/08/%E6%8A%BD%E5%8F%96JDBCU%E5%B7%A5%E5%85%B7%E7%B1%BB%E2%80%94%E2%80%94JDBCUtils%E7%9A%84%E4%BD%BF%E7%94%A8/&title=抽取JDBCU工具类——JDBCUtils的使用 - Hk's | blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/08/08/%E6%8A%BD%E5%8F%96JDBCU%E5%B7%A5%E5%85%B7%E7%B1%BB%E2%80%94%E2%80%94JDBCUtils%E7%9A%84%E4%BD%BF%E7%94%A8/&title=抽取JDBCU工具类——JDBCUtils的使用 - Hk's | blog&summary=在上一篇介绍JDBC基础使用的博文中，简单了解到JDBC的使用。但是，也看出了一定的弊端：重复代码量较大。在我们每次新建一个JDBC的类操作数据库时，都要不停的进行驱动的注册，数据库的连接，参数的输入等大量重复性的操作。所以，有没有什么方法简化这一类的操作呢？其实，将这些重复的代码进行抽取，作为一个工具类，每次使用的时候进行调用即可，这样便能够达到代码的可复用性。抽取JDBC工具类的思路：
+
+将注册驱动进行抽取
+抽取一个方法获取连接对象
+需求：不必传递参数，并且保证工具类的通用性。
+解决：配置文件。
+
+
+"
           
           >
           
@@ -638,7 +650,15 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2020/08/08/%E6%8A%BD%E5%8F%96JDBCU%E5%B7%A5%E5%85%B7%E7%B1%BB%E2%80%94%E2%80%94JDBCUtils%E7%9A%84%E4%BD%BF%E7%94%A8/&title=抽取JDBCU工具类——JDBCUtils的使用 - Hk's | blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2020/08/08/%E6%8A%BD%E5%8F%96JDBCU%E5%B7%A5%E5%85%B7%E7%B1%BB%E2%80%94%E2%80%94JDBCUtils%E7%9A%84%E4%BD%BF%E7%94%A8/&title=抽取JDBCU工具类——JDBCUtils的使用 - Hk's | blog&summary=在上一篇介绍JDBC基础使用的博文中，简单了解到JDBC的使用。但是，也看出了一定的弊端：重复代码量较大。在我们每次新建一个JDBC的类操作数据库时，都要不停的进行驱动的注册，数据库的连接，参数的输入等大量重复性的操作。所以，有没有什么方法简化这一类的操作呢？其实，将这些重复的代码进行抽取，作为一个工具类，每次使用的时候进行调用即可，这样便能够达到代码的可复用性。抽取JDBC工具类的思路：
+
+将注册驱动进行抽取
+抽取一个方法获取连接对象
+需求：不必传递参数，并且保证工具类的通用性。
+解决：配置文件。
+
+
+"
           
           >
           
@@ -650,7 +670,15 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/08/08/%E6%8A%BD%E5%8F%96JDBCU%E5%B7%A5%E5%85%B7%E7%B1%BB%E2%80%94%E2%80%94JDBCUtils%E7%9A%84%E4%BD%BF%E7%94%A8/&title=抽取JDBCU工具类——JDBCUtils的使用 - Hk's | blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/08/08/%E6%8A%BD%E5%8F%96JDBCU%E5%B7%A5%E5%85%B7%E7%B1%BB%E2%80%94%E2%80%94JDBCUtils%E7%9A%84%E4%BD%BF%E7%94%A8/&title=抽取JDBCU工具类——JDBCUtils的使用 - Hk's | blog&summary=在上一篇介绍JDBC基础使用的博文中，简单了解到JDBC的使用。但是，也看出了一定的弊端：重复代码量较大。在我们每次新建一个JDBC的类操作数据库时，都要不停的进行驱动的注册，数据库的连接，参数的输入等大量重复性的操作。所以，有没有什么方法简化这一类的操作呢？其实，将这些重复的代码进行抽取，作为一个工具类，每次使用的时候进行调用即可，这样便能够达到代码的可复用性。抽取JDBC工具类的思路：
+
+将注册驱动进行抽取
+抽取一个方法获取连接对象
+需求：不必传递参数，并且保证工具类的通用性。
+解决：配置文件。
+
+
+"
           
           >
           
