@@ -399,9 +399,147 @@
         
           
         
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <article class="post white-box shadow reveal ">
+  
+
+
+  <section class='meta'>
+    
+      
+      
+      <div class="meta" id="header-meta">
+        
+          
+  <h2 class="title">
+    <a href="/2020/09/02/%E6%8A%BD%E5%8F%96JDBCU%E5%B7%A5%E5%85%B7%E7%B1%BB%E2%80%94%E2%80%94JDBCUtils%E7%9A%84%E4%BD%BF%E7%94%A8%20-%20%E5%89%AF%E6%9C%AC/">
+      抽取JDBCU工具类——JDBCUtils的使用
+    </a>
+  </h2>
+
+
+        
+        <div class='new-meta-box'>
+          
+            
+          
+            
+              
+<div class='new-meta-item author'>
+  <a class='author' target="_blank" href="https://180cmkun.site" rel="nofollow noopener">
+    <img no-lazy src="https://i.loli.net/2020/08/08/3iSLNXsIMxRkmzZ.png">
+    <p>hekun</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/JAVA/JDBC/' rel="nofollow">
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <p>JAVA/JDBC</p>
+    </a>
+  </div>
+
+
+            
+          
+            
+              <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2020年9月2日</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+            
+              
+  <div class="new-meta-item browse valine">
+    <a class='notlink'>
+      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+      
+      <span id="/2020/09/02/%E6%8A%BD%E5%8F%96JDBCU%E5%B7%A5%E5%85%B7%E7%B1%BB%E2%80%94%E2%80%94JDBCUtils%E7%9A%84%E4%BD%BF%E7%94%A8%20-%20%E5%89%AF%E6%9C%AC/" class="leancloud_visitors" data-flag-title="抽取JDBCU工具类——JDBCUtils的使用">
+      <p>
+        <span class="leancloud-visitors-count"></span>
+      </p>
+      </span>
+    </a>
+  </div>
+
+
+            
+          
+            
+              
+<div class="new-meta-item comments-count">
+  
+  <a href="/2020/09/02/%E6%8A%BD%E5%8F%96JDBCU%E5%B7%A5%E5%85%B7%E7%B1%BB%E2%80%94%E2%80%94JDBCUtils%E7%9A%84%E4%BD%BF%E7%94%A8%20-%20%E5%89%AF%E6%9C%AC/#comments">
+    <i class="fas fa-comment-dots fa-fw"></i>
+    <span class="valine-comment-count" data-xid="/2020/09/02/%E6%8A%BD%E5%8F%96JDBCU%E5%B7%A5%E5%85%B7%E7%B1%BB%E2%80%94%E2%80%94JDBCUtils%E7%9A%84%E4%BD%BF%E7%94%A8%20-%20%E5%89%AF%E6%9C%AC/">0</span>
+    <span class="leancloud-comments-count">&nbsp;</span>
+  </a>
+</div>
+
+
+            
+          
+            
+              
+
+            
+          
+        </div>
+        
+          <hr>
+        
+      </div>
+    
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在上一篇介绍JDBC基础使用的博文中，简单了解到JDBC的使用。但是，也看出了一定的弊端：<strong>重复代码量</strong>较大。在我们每次新建一个JDBC的类操作数据库时，都要不停的进行驱动的注册，数据库的连接，参数的输入等大量重复性的操作。所以，有没有什么方法简化这一类的操作呢？<br>其实，将这些重复的代码进行抽取，作为一个工具类，每次使用的时候进行调用即可，这样便能够达到代码的可复用性。<br>抽取JDBC工具类的思路：</p>
+<ol>
+<li>将注册驱动进行抽取</li>
+<li>抽取一个方法获取连接对象<ul>
+<li>需求：不必传递参数，并且保证工具类的通用性。</li>
+<li>解决：配置文件。</li>
+</ul>
+</li>
+</ol>
+      
+    </div>
+    
+      
+        <a class= "readmore" href="/2020/09/02/%E6%8A%BD%E5%8F%96JDBCU%E5%B7%A5%E5%85%B7%E7%B1%BB%E2%80%94%E2%80%94JDBCUtils%E7%9A%84%E4%BD%BF%E7%94%A8%20-%20%E5%89%AF%E6%9C%AC/">
+          阅读全文 <i class="fas fa-chevron-right"></i>
+        </a>
+      
+    
+  </section>
+</article>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -776,12 +914,12 @@
           <li><a class="flat-box"
             title="/categories/JAVA/" href="/categories/JAVA/"
             id="categoriesJAVA"
-            ><div class='name'>JAVA</div><div class='badge'>(2)</div></a></li>
+            ><div class='name'>JAVA</div><div class='badge'>(3)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/JAVA/JDBC/" href="/categories/JAVA/JDBC/"
             id="categoriesJAVAJDBC"
-            ><div class='name'>JDBC</div><div class='badge'>(2)</div></a></li>
+            ><div class='name'>JDBC</div><div class='badge'>(3)</div></a></li>
         
       </ul>
     </div>
@@ -805,7 +943,7 @@
 
 
     <div class='content'>
-      <a href="/tags/JAVA/" style="font-size: 24px; color: #555">JAVA</a> <a href="/tags/JDBC/" style="font-size: 24px; color: #555">JDBC</a> <a href="/tags/JDBCUitls/" style="font-size: 14px; color: #999">JDBCUitls</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/others/" style="font-size: 14px; color: #999">others</a>
+      <a href="/tags/JAVA/" style="font-size: 24px; color: #555">JAVA</a> <a href="/tags/JDBC/" style="font-size: 24px; color: #555">JDBC</a> <a href="/tags/JDBCUitls/" style="font-size: 19px; color: #777">JDBCUitls</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/others/" style="font-size: 14px; color: #999">others</a>
     </div>
   </section>
 
@@ -904,7 +1042,7 @@
     
       
         <div class='copyright'>
-        <p><a href="/">Copyright © 2017-2020 XXX</a></p>
+        <p><a target="_blank" rel="noopener" href="https://180cmkun.site/">Copyright © 2017-2020 HK · S</a></p>
 
         </div>
       
