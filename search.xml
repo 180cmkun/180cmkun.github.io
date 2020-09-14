@@ -93,33 +93,6 @@
     </entry>
     
     
-    
-    <entry>
-      <title>Hexo搭建个人博客（基础篇）</title>
-      <link href="/2019/06/28/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%89/"/>
-      <url>/2019/06/28/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%89/</url>
-      
-        <content type="html"><![CDATA[<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>建立建立 Hexo 只需要几分钟，安装 Hexo 非常简单。但是，您首先需要安装其他一些东西。</p><blockquote><p>Node.js(Node.js 版本需不低于 8.6，建议使用 Node.js 10.0 及以上版本)<br>Git<br>Git<br>如果您的电脑中已经安装上述必备程序，那么恭喜您！接下来只需要使用 npm 即可完成 Hexo 的安装。</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure><p>如果没有，那就一起来看下面吧 (这里只说一下 windows 的安装，因为本人现在比较穷，买不起mac啊 テ_デ，其他相关教程大家就去搜搜很多的。)</p><h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><blockquote><p><a href="https://git-scm.com/downloads">安装地址</a></p></blockquote><p>一切按照默认走就行了，没什么特殊的地方，安装完成之后检查git是否安装成功（执行一下cmd命令），显示版本号即为成功！</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure><a id="more"></a><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><blockquote><p><a href="https://nodejs.org/en/">安装地址</a></p></blockquote><p>我们这里简单点，直接下载并运行安装程序就完了，还是走默认就行，安装完成之后检查 node 是否安装成功（执行一下cmd命令），显示版本号即为成功！</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure><h3 id="安装Hexo-1"><a href="#安装Hexo-1" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure><p>利用Hexo初始化我们的站点跟目录(文件)</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;文件夹&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;文件夹&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure><p>选择你想要的盘符来建立我们的博客站点文件,我这里选择 D:\blog ，这里的 blog 是你的文件夹名字（根据自己的喜好建一个文件夹）</p><p>cd 到你的站点目录下，然后 初始化站点 $ npm install，执行成功后到你的 blog 文件夹查看是否有内容，就成功了。</p><h2 id="利用Hexo初始化站点的根目录"><a href="#利用Hexo初始化站点的根目录" class="headerlink" title="利用Hexo初始化站点的根目录"></a>利用Hexo初始化站点的根目录</h2><p>介绍几个个命令 ,以后经常要用到的</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo g: 编译,生成静态文件，也就是public文件夹的东西。</span><br><span class="line">hexo s: 开启本地服务(以上两步的操作可以合并成hexo s -g)。</span><br><span class="line">hexo clean: 顾名思义就是清除缓存的意思了啦，这招一般在你改动之后网站没有变化时候用。</span><br></pre></td></tr></table></figure><p>接下来看看初步成果吧<br>终端在blog文件根目录：</p><blockquote><p>执行命令: hexo g 和 hexo s<br>到此为止，你的个人博客就搭建好了。</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> HEXO </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> hexo </tag>
-            
-            <tag> others </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
   
   
 </search>
