@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -18,9 +16,14 @@
 
   <!-- 页面元数据 -->
   
-  <title>归档：2020 - Hk&#39;s | blog</title>
+  <title>nodejs学习 - Hk&#39;s | blog</title>
+  
+    <meta name="keywords" content="nodejs">
   
 
+  
+    <meta name="description" content="web服务: express, koa, hapi模板引擎: handlebars, ejs, jade前端打包: webpak, fis,任务管理: gulp单元测试: karma, mocha, jasmine包管理器: npm, cnpm, yarn守护进程: pm2
+">
   
 
   <!-- feed -->
@@ -77,7 +80,7 @@
   
   
   <div class="cover-wrapper">
-    <cover class='cover ' style="display: none;">
+    <cover class='cover post' style="display: none;">
       <div class='cover-body'>
   <div class='a'>
     
@@ -346,7 +349,7 @@
   
 
 
-  <div class="l_body">
+  <div class="l_body nocover">
     <div class='body-wrapper' id="pjax-container">
       
         <!--此文件用来存放一些不方便取值的变量--> 
@@ -355,8 +358,8 @@
  
  
 <div id="pjax-data" style="display: none"> 
-  <div id="pjax-ispage">false</div> 
-  <div id="pjax-pageTitle"></div> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">nodejs学习</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path">none</div> 
   <div id="pjax-comment-placeholder">none</div> 
@@ -365,16 +368,16 @@
  
 <script> 
   // 处理封面 此时 jquery 还没加载 
-  if ("blog" == "none") { // 移除封面 
+  if ("none" == "none") { // 移除封面 
     document.getElementsByClassName('cover')[0].style.display = "none"; 
     document.getElementsByClassName('l_body')[0].classList.add("nocover"); 
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show"); 
   } else { 
-    if ("blog" == "blog") { // 半屏 
+    if ("none" == "blog") { // 半屏 
       document.getElementsByClassName('cover')[0].classList.remove("full"); 
       document.getElementsByClassName('cover')[0].classList.add("half"); 
       document.getElementsByClassName('scroll-down')[0].style.display = "none"; 
-    } else if ("blog" == "docs") { // 全屏 
+    } else if ("none" == "docs") { // 全屏 
       document.getElementsByClassName('cover')[0].classList.remove("half"); 
       document.getElementsByClassName('cover')[0].classList.add("full"); 
       document.getElementsByClassName('scroll-down')[0].style.display = ""; 
@@ -389,26 +392,11 @@
       
 
 <div class='l_main'>
-	
-		
-  <section class="post-list ">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
   
+
+  
+    <article id="post" class="post white-box reveal shadow article-type-post" itemscope itemprop="blogPost">
+      
 
 
   <section class='meta'>
@@ -418,11 +406,11 @@
       <div class="meta" id="header-meta">
         
           
-  <h2 class="title">
+  <h1 class="title">
     <a href="/2020/11/06/Nodejs%E5%AD%A6%E4%B9%A0/">
       nodejs学习
     </a>
-  </h2>
+  </h1>
 
 
         
@@ -469,42 +457,6 @@
 
             
           
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/2020/11/06/Nodejs%E5%AD%A6%E4%B9%A0/" class="leancloud_visitors" data-flag-title="nodejs学习">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/2020/11/06/Nodejs%E5%AD%A6%E4%B9%A0/#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/2020/11/06/Nodejs%E5%AD%A6%E4%B9%A0/">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
         </div>
         
           <hr>
@@ -514,366 +466,89 @@
   </section>
 
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>web服务: express, koa, hapi<br>模板引擎: handlebars, ejs, jade<br>前端打包: webpak, fis,<br>任务管理: gulp<br>单元测试: karma, mocha, jasmine<br>包管理器: npm, cnpm, yarn<br>守护进程: pm2</p>
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          
+          <p>web服务: express, koa, hapi<br>模板引擎: handlebars, ejs, jade<br>前端打包: webpak, fis,<br>任务管理: gulp<br>单元测试: karma, mocha, jasmine<br>包管理器: npm, cnpm, yarn<br>守护进程: pm2</p>
 <hr>
-      
-    </div>
-    
-      
-        <a class= "readmore" href="/2020/11/06/Nodejs%E5%AD%A6%E4%B9%A0/">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
+<a id="more"></a>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
+<h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><p>1.初始化</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$</span> npm init </span><br></pre></td></tr></table></figure>
 
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/2020/08/08/%E6%8A%BD%E5%8F%96JDBCU%E5%B7%A5%E5%85%B7%E7%B1%BB%E2%80%94%E2%80%94JDBCUtils%E7%9A%84%E4%BD%BF%E7%94%A8/">
-      抽取JDBCU工具类——JDBCUtils的使用
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a class='author' target="_blank" href="https://180cmkun.site" rel="nofollow noopener">
-    <img no-lazy src="https://i.loli.net/2020/08/08/3iSLNXsIMxRkmzZ.png">
-    <p>hekun</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/JAVA/JDBC/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>JAVA/JDBC</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年8月8日</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/2020/08/08/%E6%8A%BD%E5%8F%96JDBCU%E5%B7%A5%E5%85%B7%E7%B1%BB%E2%80%94%E2%80%94JDBCUtils%E7%9A%84%E4%BD%BF%E7%94%A8/" class="leancloud_visitors" data-flag-title="抽取JDBCU工具类——JDBCUtils的使用">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/2020/08/08/%E6%8A%BD%E5%8F%96JDBCU%E5%B7%A5%E5%85%B7%E7%B1%BB%E2%80%94%E2%80%94JDBCUtils%E7%9A%84%E4%BD%BF%E7%94%A8/#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/2020/08/08/%E6%8A%BD%E5%8F%96JDBCU%E5%B7%A5%E5%85%B7%E7%B1%BB%E2%80%94%E2%80%94JDBCUtils%E7%9A%84%E4%BD%BF%E7%94%A8/">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在上一篇介绍JDBC基础使用的博文中，简单了解到JDBC的使用。但是，也看出了一定的弊端：<strong>重复代码量</strong>较大。在我们每次新建一个JDBC的类操作数据库时，都要不停的进行驱动的注册，数据库的连接，参数的输入等大量重复性的操作。所以，有没有什么方法简化这一类的操作呢？<br>其实，将这些重复的代码进行抽取，作为一个工具类，每次使用的时候进行调用即可，这样便能够达到代码的可复用性。<br>抽取JDBC工具类的思路：</p>
-<ol>
-<li>将注册驱动进行抽取</li>
-<li>抽取一个方法获取连接对象<ul>
-<li>需求：不必传递参数，并且保证工具类的通用性。</li>
-<li>解决：配置文件。</li>
-</ul>
-</li>
+<ol start="2">
+<li>依赖安装:-S（等同于–save）表示项目打包时会将该依赖包一并打包；-D（等同于–save-dev）表示该依赖包仅在开发环境下使用，正式打包不会加到项目中。</li>
 </ol>
-      
-    </div>
-    
-      
-        <a class= "readmore" href="/2020/08/08/%E6%8A%BD%E5%8F%96JDBCU%E5%B7%A5%E5%85%B7%E7%B1%BB%E2%80%94%E2%80%94JDBCUtils%E7%9A%84%E4%BD%BF%E7%94%A8/">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 安装但不写入package.json； </span></span><br><span class="line"><span class="variable">$</span> npm install xxx</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 安装并写入package.json的&quot;dependencies&quot;中；</span></span><br><span class="line"><span class="variable">$</span> npm install xxx –S </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 安装并写入package.json的&quot;evDependencies&quot;中;</span></span><br><span class="line"><span class="variable">$</span> npm install xxx –D</span><br><span class="line"> </span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
+<h2 id="express模块"><a href="#express模块" class="headerlink" title="express模块"></a>express模块</h2><p>1.基于nodejs的极简web服务开发框架,可以快速创建web服务器</p>
+<p>2.项目初始化</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$</span> npx express<span class="literal">-generator</span> -<span class="literal">-view</span>=ejs 项目名字</span><br></pre></td></tr></table></figure>
 
+<p>3.安装依赖</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$</span> nmp i</span><br></pre></td></tr></table></figure>
 
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
+<p>4.启动项目</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$</span> npm <span class="built_in">start</span></span><br></pre></td></tr></table></figure>
+
+<p>5.目录结构</p>
+<ul>
+<li><p>bin: 启动目录 里面包含了一个启动文件 www 默认监听端口是 3000 (不用)</p>
+</li>
+<li><p>node_modules: 所有安装的依赖模块 都在这个文件夹里面</p>
+</li>
+<li><p>public: 所有的前端静态资源 html css image js</p>
+</li>
+<li><p>routes: 放的是 路由 文件 (默认有两个)路由主要定义 url 和 资源 的映射关系 ( 一一对应关系 )主要用来接收前端发送的请求 响应数据给前端</p>
+</li>
+<li><p>views: 主要放置 ejs 后端模板文件</p>
+</li>
+<li><p>app.js: 入口文件(主文件) 总路由 (其他的路由 要由它来分配)</p>
+</li>
+<li><p>package.json: 包描述文件 最重要的是 依赖的模板列表 dependencies</p>
+</li>
+</ul>
+
           
-  <h2 class="title">
-    <a href="/2020/08/08/JDBC%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/">
-      JDBC基础使用
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
+            <div class='article_footer'>
               
-<div class='new-meta-item author'>
-  <a class='author' target="_blank" href="https://180cmkun.site" rel="nofollow noopener">
-    <img no-lazy src="https://i.loli.net/2020/08/08/3iSLNXsIMxRkmzZ.png">
-    <p>hekun</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/JAVA/JDBC/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>JAVA/JDBC</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年8月8日</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/2020/08/08/JDBC%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/" class="leancloud_visitors" data-flag-title="JDBC基础使用">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/2020/08/08/JDBC%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/2020/08/08/JDBC%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>定义：<code>JDBC:Java DataBase Connectivity</code>,即为Java数据库连接。</p>
-<p><code>JDBC</code>是Java语言中用来规范客户端程序如何来访问数据库的应用程序接口，提供了诸如查询和更新数据库中数据的方法。即：定义的一套操作所有关系型数据库的规则，是为接口。各个数据库厂商去实现这套接口，提供数据库驱动jar包。我们可以使用这套接(JDBC)编程，真正执行的代码是驱动jar包中的实现类。</p>
-<p><img src="https://s1.ax1x.com/2020/03/18/8da5k9.png" alt="img"></p>
-      
-    </div>
-    
-      
-        <a class= "readmore" href="/2020/08/08/JDBC%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-    
-    
-
-  
-
-
-	
-</div>
-<aside class='l_side'>
-  
+                
   
     
     
 
-<section class="widget blogger shadow desktop mobile">
+
+
+  
+
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
   <div class='content'>
     
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://i.loli.net/2020/08/08/3iSLNXsIMxRkmzZ.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">Hk's | blog</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
+      <blockquote>
         
           
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
           
         
           
-            <a href="mailto:180cmkun.site"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
+            <p>本文永久链接是：<a href=http://yoursite.com/2020/11/06/Nodejs%E5%AD%A6%E4%B9%A0/>http://yoursite.com/2020/11/06/Nodejs%E5%AD%A6%E4%B9%A0/</a></p>
           
         
-          
-            <a href="https://github.com/180cmkun"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
-          
-        
-          
-            <a href="https://music.163.com/#/user/home?id=1447689893"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
-          
-        
-      </div>
+      </blockquote>
     
   </div>
 </section>
@@ -883,77 +558,193 @@
   
     
     
+
+<section class="widget qrcode  desktop mobile">
   
 
-  <section class="widget category shadow desktop">
+  <div class='content article-entry'>
+    
+      
+        <div class='fancybox'><img src='https://i.loli.net/2020/09/07/Mpwzi9WBKhvAtDm.png'
+        
+          height='64px'
+        ></div>
+      
+    
+      
+        <div class='fancybox'><img src='https://i.loli.net/2020/09/07/9vKSRwNO1TkraWG.jpg'
+        
+          height='64px'
+        ></div>
+      
+    
+  </div>
+</section>
+
+  
+
+
+              
+            </div>
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-06T16:47:49+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年11月6日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/nodejs/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>nodejs</p></a></div>
+
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/11/06/Nodejs%E5%AD%A6%E4%B9%A0/&title=nodejs学习 - Hk's | blog&summary=web服务: express, koa, hapi模板引擎: handlebars, ejs, jade前端打包: webpak, fis,任务管理: gulp单元测试: karma, mocha, jasmine包管理器: npm, cnpm, yarn守护进程: pm2
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2020/11/06/Nodejs%E5%AD%A6%E4%B9%A0/&title=nodejs学习 - Hk's | blog&summary=web服务: express, koa, hapi模板引擎: handlebars, ejs, jade前端打包: webpak, fis,任务管理: gulp单元测试: karma, mocha, jasmine包管理器: npm, cnpm, yarn守护进程: pm2
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/11/06/Nodejs%E5%AD%A6%E4%B9%A0/&title=nodejs学习 - Hk's | blog&summary=web服务: express, koa, hapi模板引擎: handlebars, ejs, jade前端打包: webpak, fis,任务管理: gulp单元测试: karma, mocha, jasmine包管理器: npm, cnpm, yarn守护进程: pm2
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+            
+              <a class='next' href='/2020/08/08/%E6%8A%BD%E5%8F%96JDBCU%E5%B7%A5%E5%85%B7%E7%B1%BB%E2%80%94%E2%80%94JDBCUtils%E7%9A%84%E4%BD%BF%E7%94%A8/'>
+                <p class='title'>抽取JDBCU工具类——JDBCUtils的使用<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>在上一篇介绍JDBC基础使用的博文中，简单了解到JDBC的使用。但是，也看出了一定的弊端：重复代码量较大。在我们每次新建一个JDBC的类操作数据库时，都要不停的进行驱动的注册，数据库的连接，参数...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    
+
+  <article class="post white-box reveal comments shadow">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      <section id="comments">
+        <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+      </section>
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+</div>
+<aside class='l_side'>
+  
+  
+
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/JAVA/" href="/categories/JAVA/"
-            id="categoriesJAVA"
-            ><div class='name'>JAVA</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/JAVA/JDBC/" href="/categories/JAVA/JDBC/"
-            id="categoriesJAVAJDBC"
-            ><div class='name'>JDBC</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/nodejs/" href="/categories/nodejs/"
-            id="categoriesnodejs"
-            ><div class='name'>nodejs</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#npm"><span class="toc-text">npm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#express%E6%A8%A1%E5%9D%97"><span class="toc-text">express模块</span></a></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/JAVA/" style="font-size: 24px; color: #555">JAVA</a> <a href="/tags/JDBC/" style="font-size: 24px; color: #555">JDBC</a> <a href="/tags/JDBCUitls/" style="font-size: 14px; color: #999">JDBCUitls</a> <a href="/tags/nodejs/" style="font-size: 14px; color: #999">nodejs</a>
-    </div>
-  </section>
-
-
-  
 
   
 
 
 </aside>
 
-
-
-
-
-	<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-	
-
-	
 
 
     </div>

@@ -18,7 +18,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>归档：2020 - Hk&#39;s | blog</title>
+  <title>分类：nodejs - Hk&#39;s | blog</title>
   
 
   
@@ -346,7 +346,7 @@
   
 
 
-  <div class="l_body">
+  <div class="l_body nocover">
     <div class='body-wrapper' id="pjax-container">
       
         <!--此文件用来存放一些不方便取值的变量--> 
@@ -365,16 +365,16 @@
  
 <script> 
   // 处理封面 此时 jquery 还没加载 
-  if ("blog" == "none") { // 移除封面 
+  if ("none" == "none") { // 移除封面 
     document.getElementsByClassName('cover')[0].style.display = "none"; 
     document.getElementsByClassName('l_body')[0].classList.add("nocover"); 
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show"); 
   } else { 
-    if ("blog" == "blog") { // 半屏 
+    if ("none" == "blog") { // 半屏 
       document.getElementsByClassName('cover')[0].classList.remove("full"); 
       document.getElementsByClassName('cover')[0].classList.add("half"); 
       document.getElementsByClassName('scroll-down')[0].style.display = "none"; 
-    } else if ("blog" == "docs") { // 全屏 
+    } else if ("none" == "docs") { // 全屏 
       document.getElementsByClassName('cover')[0].classList.remove("half"); 
       document.getElementsByClassName('cover')[0].classList.add("full"); 
       document.getElementsByClassName('scroll-down')[0].style.display = ""; 
@@ -388,16 +388,14 @@
       
       
 
+
 <div class='l_main'>
-	
-		
+  
+    
+      
   <section class="post-list ">
     
       
-        
-          
-        
-          
         
           
         
@@ -534,272 +532,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/2020/08/08/%E6%8A%BD%E5%8F%96JDBCU%E5%B7%A5%E5%85%B7%E7%B1%BB%E2%80%94%E2%80%94JDBCUtils%E7%9A%84%E4%BD%BF%E7%94%A8/">
-      抽取JDBCU工具类——JDBCUtils的使用
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a class='author' target="_blank" href="https://180cmkun.site" rel="nofollow noopener">
-    <img no-lazy src="https://i.loli.net/2020/08/08/3iSLNXsIMxRkmzZ.png">
-    <p>hekun</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/JAVA/JDBC/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>JAVA/JDBC</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年8月8日</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/2020/08/08/%E6%8A%BD%E5%8F%96JDBCU%E5%B7%A5%E5%85%B7%E7%B1%BB%E2%80%94%E2%80%94JDBCUtils%E7%9A%84%E4%BD%BF%E7%94%A8/" class="leancloud_visitors" data-flag-title="抽取JDBCU工具类——JDBCUtils的使用">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/2020/08/08/%E6%8A%BD%E5%8F%96JDBCU%E5%B7%A5%E5%85%B7%E7%B1%BB%E2%80%94%E2%80%94JDBCUtils%E7%9A%84%E4%BD%BF%E7%94%A8/#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/2020/08/08/%E6%8A%BD%E5%8F%96JDBCU%E5%B7%A5%E5%85%B7%E7%B1%BB%E2%80%94%E2%80%94JDBCUtils%E7%9A%84%E4%BD%BF%E7%94%A8/">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在上一篇介绍JDBC基础使用的博文中，简单了解到JDBC的使用。但是，也看出了一定的弊端：<strong>重复代码量</strong>较大。在我们每次新建一个JDBC的类操作数据库时，都要不停的进行驱动的注册，数据库的连接，参数的输入等大量重复性的操作。所以，有没有什么方法简化这一类的操作呢？<br>其实，将这些重复的代码进行抽取，作为一个工具类，每次使用的时候进行调用即可，这样便能够达到代码的可复用性。<br>抽取JDBC工具类的思路：</p>
-<ol>
-<li>将注册驱动进行抽取</li>
-<li>抽取一个方法获取连接对象<ul>
-<li>需求：不必传递参数，并且保证工具类的通用性。</li>
-<li>解决：配置文件。</li>
-</ul>
-</li>
-</ol>
-      
-    </div>
-    
-      
-        <a class= "readmore" href="/2020/08/08/%E6%8A%BD%E5%8F%96JDBCU%E5%B7%A5%E5%85%B7%E7%B1%BB%E2%80%94%E2%80%94JDBCUtils%E7%9A%84%E4%BD%BF%E7%94%A8/">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/2020/08/08/JDBC%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/">
-      JDBC基础使用
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a class='author' target="_blank" href="https://180cmkun.site" rel="nofollow noopener">
-    <img no-lazy src="https://i.loli.net/2020/08/08/3iSLNXsIMxRkmzZ.png">
-    <p>hekun</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/JAVA/JDBC/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>JAVA/JDBC</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年8月8日</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/2020/08/08/JDBC%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/" class="leancloud_visitors" data-flag-title="JDBC基础使用">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/2020/08/08/JDBC%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/2020/08/08/JDBC%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>定义：<code>JDBC:Java DataBase Connectivity</code>,即为Java数据库连接。</p>
-<p><code>JDBC</code>是Java语言中用来规范客户端程序如何来访问数据库的应用程序接口，提供了诸如查询和更新数据库中数据的方法。即：定义的一套操作所有关系型数据库的规则，是为接口。各个数据库厂商去实现这套接口，提供数据库驱动jar包。我们可以使用这套接(JDBC)编程，真正执行的代码是驱动jar包中的实现类。</p>
-<p><img src="https://s1.ax1x.com/2020/03/18/8da5k9.png" alt="img"></p>
-      
-    </div>
-    
-      
-        <a class= "readmore" href="/2020/08/08/JDBC%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
     
   </section>
   
@@ -811,7 +543,9 @@
   
 
 
-	
+    
+  
+
 </div>
 <aside class='l_side'>
   
@@ -946,14 +680,6 @@
 
 </aside>
 
-
-
-
-
-	<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-	
-
-	
 
 
     </div>
